@@ -5,15 +5,12 @@
 */
 
 const APPS_SCRIPT_URL = CONFIG.APPS_SCRIPT_URL;
-let isSubmitting = false; /* ← prevents double submit */
 
-/* ════════════════════════════════════════
-   SUBMIT HANDLER
-════════════════════════════════════════ */
+let isSubmitting = false;
+
 function handleSubmit(e) {
   e.preventDefault();
 
-  /* ── Block if already submitting ── */
   if (isSubmitting) return;
 
   /* ── Validate required fields ── */
@@ -24,7 +21,15 @@ function handleSubmit(e) {
     const el = document.getElementById(id);
     if (!el || !el.value.trim()) {
       el.classList.add('error');
-      el.addEventListener('input', () => el.classList.remove('error'), { once: true });
+      el.style.borderColor = '#C0392B';
+      el.addEventListener('change', () => {
+        el.classList.remove('error');
+        el.style.borderColor = '';
+      }, { once: true });
+      el.addEventListener('input', () => {
+        el.classList.remove('error');
+        el.style.borderColor = '';
+      }, { once: true });
       if (!firstInvalid) firstInvalid = el;
     }
   });
@@ -32,28 +37,37 @@ function handleSubmit(e) {
   /* ── Validate photo ── */
   const photo    = document.getElementById('photo');
   const fileWrap = document.querySelector('.file-input-wrap');
+
   if (!photo.files || photo.files.length === 0) {
     fileWrap.style.borderColor = '#C0392B';
+    document.getElementById('file-name').textContent = 'Please select a photo';
+    if (!firstInvalid) firstInvalid = photo;
+  } else if (photo.files[0].size > 10 * 1024 * 1024) {
+    fileWrap.style.borderColor = '#C0392B';
+    document.getElementById('file-name').textContent = 'Photo too large — please choose under 10MB';
     if (!firstInvalid) firstInvalid = photo;
   }
 
-  if (firstInvalid) { firstInvalid.focus(); return; }
+  if (firstInvalid) {
+    firstInvalid.focus();
+    firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return;
+  }
 
-  /* ── Lock submission ── */
-  isSubmitting = true;
+  /* ── Lock submission immediately ── */
   const btn    = document.querySelector('.submit-btn');
-  btn.textContent = 'Submitting…';
   btn.disabled    = true;
+  btn.textContent = 'Submitting…';
+  isSubmitting    = true;
 
-  /* ── Read and compress photo, then submit ── */
+  /* ── Read photo ── */
   const file   = photo.files[0];
   const fname  = document.getElementById('fname').value.trim();
   const lname  = document.getElementById('lname').value.trim();
   const reader = new FileReader();
 
-  /* Only assign onload once */
   reader.onload = function(event) {
-    const img    = new Image();
+    const img  = new Image();
 
     img.onload = function() {
       /* ── Compress image ── */
@@ -91,35 +105,56 @@ function handleSubmit(e) {
         photo_name   : fileName,
       };
 
-      /* ── Send to Apps Script ── */
-      fetch(APPS_SCRIPT_URL, {
-        method : 'POST',
-        mode   : 'no-cors',
-        body   : JSON.stringify(payload),
-      })
+      /* ── Send with timeout ── */
+      const timeout = new Promise((_, reject) =>
+        setTimeout(() => reject(new Error('timeout')), 30000)
+      );
+
+      Promise.race([
+        fetch(APPS_SCRIPT_URL, {
+          method : 'POST',
+          mode   : 'no-cors',
+          body   : JSON.stringify(payload),
+        }),
+        timeout
+      ])
       .then(() => {
         document.getElementById('regForm').style.display = 'none';
         document.getElementById('successScreen').classList.add('show');
         window.scrollTo({ top: 0, behavior: 'smooth' });
       })
-      .catch(() => {
+      .catch((err) => {
         isSubmitting    = false;
         btn.textContent = 'Submit Registration →';
         btn.disabled    = false;
-        alert('Something went wrong. Please check your connection and try again.');
+        if (err.message === 'timeout') {
+          alert('Request timed out. Please check your connection and try again.');
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
       });
+    };
+
+    img.onerror = function() {
+      isSubmitting    = false;
+      btn.textContent = 'Submit Registration →';
+      btn.disabled    = false;
+      alert('Could not read the photo. Please choose a different image.');
     };
 
     img.src = event.target.result;
   };
 
-  /* ── Start reading — only called once ── */
+  reader.onerror = function() {
+    isSubmitting    = false;
+    btn.textContent = 'Submit Registration →';
+    btn.disabled    = false;
+    alert('Could not read the photo. Please try again.');
+  };
+
   reader.readAsDataURL(file);
 }
 
-/* ════════════════════════════════════════
-   FILE LABEL UPDATE
-════════════════════════════════════════ */
 function updateFileLabel(input) {
   document.querySelector('.file-input-wrap').style.borderColor = '';
   document.getElementById('file-name').textContent =
