@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#F4EFE6">
+<title>Player Registration · AVFC Cricket League</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Outfit:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">AVFC <span>Cricket</span></a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <p class="section-label">Join the League</p>
+  <h1 class="page-title">Player<br><em>Registration</em></h1>
+  <p class="page-subtitle">Fill in your details below to register for the AVFC Cricket League 2026. All skill levels and positions welcome.</p>
+</div>
+
+<!-- PAGE BODY -->
+<div class="page-body">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-title">Important Info</div>
+      <ul class="info-list">
+        <li>Registration closes 2 April 2025</li>
+        <li>All skill levels welcome</li>
+        <!-- <li>Team assignments sent after registration</li>
+        <li>Kit provided to all registered players</li> -->
+        <li>T10 format — 10 overs per side</li>
+        <li>Tournament held on April 19</li>
+      </ul>
+    </div>
+    <!-- <div class="contact-card">
+      <div class="contact-label">Need Help?</div>
+      <p class="contact-text">For team registrations or any queries, reach out directly.</p>
+      <a href="mailto:contact@avfcleague.com" class="contact-link">contact@avfcleague.com</a>
+    </div> -->
+  </aside>
+
+  <!-- FORM -->
+  <div class="form-card">
+
+    <!-- Success (shown after submit) -->
+    <div class="success-screen" id="successScreen">
+      <div class="success-icon">🏏</div>
+      <div class="success-title">You're Registered!</div>
+      <p class="success-msg">Thanks for signing up for the AVFC Cricket League 2026.</p>
+      <a href="index.html" class="back-btn">← Back to Home</a>
+    </div>
+
+    <!-- Registration form -->
+    <form id="regForm" onsubmit="handleSubmit(event)" novalidate>
+      <div class="form-grid">
+
+        <p class="form-section-label">Personal Details</p>
+
+        <div class="form-group">
+          <label for="fname">First Name <span class="required-star">*</span></label>
+          <input type="text" id="fname" placeholder="Virat" autocomplete="given-name" required>
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name <span class="required-star">*</span></label>
+          <input type="text" id="lname" placeholder="Kohli" autocomplete="family-name" required>
+        </div>
+        <div class="form-group">
+          <label for="age">Age <span class="required-star">*</span></label>
+          <input type="number" id="age" placeholder="24" min="10" max="60" inputmode="numeric" required>
+        </div>
+        <div class="form-group">
+          <label for="city">City <span class="required-star">*</span></label>
+          <input type="text" id="city" placeholder="Hyderabad" autocomplete="address-level2" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number <span class="required-star">*</span></label>
+          <input type="tel" id="phone" placeholder="+91 98765 43210" autocomplete="tel" inputmode="tel" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address <span class="required-star">*</span></label>
+          <input type="email" id="email" placeholder="you@email.com" autocomplete="email" inputmode="email" required>
+        </div>
+
+        <div class="form-divider"></div>
+        <p class="form-section-label">Cricket Details</p>
+
+        <div class="form-group">
+          <label for="role">Player Role <span class="required-star">*</span></label>
+          <select id="role" required>
+            <option value="" disabled selected>Select role</option>
+            <option>Batsman</option>
+            <option>Bowler</option>
+            <option>All-Rounder</option>
+            <option>Wicket-Keeper</option>
+            <option>Wicket-Keeper Batsman</option>
+          </select>
+        </div>
+        <!-- <div class="form-group">
+          <label for="batting">Batting Style <span class="required-star">*</span></label>
+          <select id="batting" required>
+            <option value="" disabled selected>Select style</option>
+            <option>Right Hand Bat</option>
+            <option>Left Hand Bat</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="bowling">Bowling Style</label>
+          <select id="bowling">
+            <option value="" disabled selected>Select style</option>
+            <option>Right Arm Fast</option>
+            <option>Right Arm Medium</option>
+            <option>Right Arm Off Break</option>
+            <option>Right Arm Leg Break</option>
+            <option>Left Arm Fast</option>
+            <option>Left Arm Medium</option>
+            <option>Left Arm Orthodox</option>
+            <option>Left Arm Chinaman</option>
+            <option>Don't Bowl</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="jersey">Preferred Jersey No.</label>
+          <input type="number" id="jersey" placeholder="18" min="1" max="99" inputmode="numeric">
+        </div>
+        <div class="form-group">
+          <label for="team">Team Name (if any)</label>
+          <input type="text" id="team" placeholder="Leave blank if unassigned">
+        </div> -->
+        <div class="form-group">
+          <label for="experience">Years of Experience</label>
+          <select id="experience">
+            <option value="" disabled selected>Select</option>
+            <option>Less than 1 year</option>
+            <option>1–3 years</option>
+            <option>3–5 years</option>
+            <option>5–10 years</option>
+            <option>10+ years</option>
+          </select>
+        </div>
+
+        <div class="form-divider"></div>
+        <p class="form-section-label">Photo Upload</p>
+
+        <div class="form-group full">
+          <label>Player Photo <span class="required-star">*</span></label>
+          <div class="file-input-wrap">
+            <input type="file" accept="image/*" id="photo" onchange="updateFileLabel(this)" required>
+            <div class="file-label">
+              <strong id="file-name">Tap to upload your photo</strong>
+              <span>JPG, PNG or WebP · Max 5 MB</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="form-group full">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" placeholder="Any injuries, preferences or information we should know…"></textarea>
+        </div> -->
+
+        <div class="submit-row">
+          <button type="submit" class="submit-btn">Submit Registration →</button>
+          <p class="submit-note">
+            Fields marked <span style="color:var(--amber)">*</span> are required.<br>
+          </p>
+        </div>
+
+      </div>
+    </form>
+  </div>
+
+</div><!-- /page-body -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">AVFC <span>Cricket</span> League</div>
+  <div class="footer-copy">© 2026 AVFC Cricket League. All rights reserved.</div>
+</footer>
+
+<!-- JS at the bottom -->
+<script src="js/register.js"></script>
+</body>
+</html>
