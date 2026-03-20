@@ -332,7 +332,14 @@ section { padding: clamp(3rem, 8vw, 6rem) 5%; }
 /* ═══════════════════════════════════════
    SPONSORS
 ═══════════════════════════════════════ */
-#sponsors { background: var(--off-white); }
+/* change #sponsors { background: var(--off-white); } */
+#sponsors {
+  background: var(--off-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .sponsors-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 2px; background: var(--border); border: 2px solid var(--border);
@@ -649,6 +656,47 @@ footer {
   50% { opacity: 0.45; transform: scale(0.8); }
 }
 
+/* ── Sponsors coming soon ── */
+.sponsors-coming-soon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+.sponsors-soon-card {
+  background: var(--off-white);
+  border: 2px dashed var(--border);
+  padding: clamp(2rem, 6vw, 4rem) clamp(1.5rem, 6vw, 5rem);
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;           /* centers horizontally on all devices */
+  transition: border-color 0.2s;
+}
+.sponsors-soon-card:hover { border-color: var(--amber); }
+.sponsors-soon-text {
+  font-family: var(--f-display);
+  font-size: clamp(2.2rem, 8vw, 3.8rem);
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--amber);
+  line-height: 1;
+  white-space: nowrap;        /* ← stops text breaking into single characters */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sponsors-soon-sub {
+  font-family: var(--f-ui);
+  font-size: clamp(0.82rem, 2.5vw, 0.95rem);
+  font-weight: 600;
+  color: var(--muted);
+  margin-top: 1rem;
+  letter-spacing: 0.04em;
+  white-space: normal;        /* sub text can still wrap normally */
+}
+
 /* ═══════════════════════════════════════
    RESPONSIVE — 1024px
 ═══════════════════════════════════════ */
@@ -677,6 +725,11 @@ footer {
   .btn-cta-primary, .btn-cta-outline { width: 100%; max-width: 360px; }
 
   footer { flex-direction: column; align-items: flex-start; gap: 0.8rem; }
+
+  /* remove after */
+  .sponsors-soon-card { padding: 2.5rem 2rem; max-width: 100%; }
+  .sponsors-soon-text { font-size: 2.6rem; white-space: normal; word-break: keep-all; }
+  .sponsors-soon-sub  { font-size: 0.88rem; }
 }
 
 /* ═══════════════════════════════════════
@@ -707,6 +760,11 @@ footer {
   footer { padding: 2rem 4%; }
   .vo-topbar, .vo-bottom { padding: 0.6rem 0.9rem; }
   .vo-skip { font-size: 0.7rem; padding: 0.4rem 0.8rem; }
+
+  /* remove after */
+  .sponsors-soon-card { padding: 2rem 1.5rem; }
+  .sponsors-soon-text { font-size: 2rem; white-space: normal; word-break: keep-all; }
+  .sponsors-soon-sub  { font-size: 0.82rem; }
 }
 
 /* ═══════════════════════════════════════
@@ -718,4 +776,9 @@ footer {
   .hero-stats      { gap: 1.2rem; }
   .hero-actions    { gap: 0.7rem; }
   .stat-num        { font-size: 2rem; }
+  /* remove after */
+  .sponsors-soon-card { padding: 1.8rem 1.2rem; }
+  .sponsors-soon-text { font-size: 1.7rem; letter-spacing: 0.04em; }
+  .sponsors-soon-sub  { font-size: 0.78rem; }
 }
+
