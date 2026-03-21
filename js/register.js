@@ -101,6 +101,7 @@ function handleSubmit(e) {
         phone        : document.getElementById('phone').value.trim(),
         prev_avfc    : document.getElementById('prev_avfc').value.trim(),
         role         : document.getElementById('role').value.trim(),
+        cricheroes   : document.getElementById('cricheroes').value.trim(),
         photo_base64 : base64,
         photo_name   : fileName,
       };

@@ -697,6 +697,43 @@ footer {
   white-space: normal;        /* sub text can still wrap normally */
 }
 
+/* ── Registration count card ── */
+.reg-count-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  padding: clamp(1rem, 4vw, 1.4rem) clamp(1.2rem, 5vw, 2rem);
+  background: var(--amber-pale);
+  border: 1.5px solid var(--amber);
+  border-radius: 2px;
+  animation: fadeUp 0.6s ease 0.5s both;
+  width: auto;
+  max-width: 100%;
+}
+.reg-count-label {
+  font-family: var(--f-ui);
+  font-size: clamp(0.6rem, 2vw, 0.68rem);
+  font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--brown); margin-bottom: 0.3rem;
+}
+.reg-count-num {
+  font-family: var(--f-display);
+  font-size: clamp(1.8rem, 8vw, 3rem);
+  font-weight: 800; color: var(--amber);
+  line-height: 1; letter-spacing: 0.04em;
+}
+.reg-count-sub {
+  font-family: var(--f-body);
+  font-size: clamp(0.7rem, 2.2vw, 0.78rem);
+  font-style: italic;
+  color: var(--muted); margin-top: 0.4rem;
+  line-height: 1.5;
+}
+
+
+
 /* ═══════════════════════════════════════
    RESPONSIVE — 1024px
 ═══════════════════════════════════════ */
@@ -730,6 +767,12 @@ footer {
   .sponsors-soon-card { padding: 2.5rem 2rem; max-width: 100%; }
   .sponsors-soon-text { font-size: 2.6rem; white-space: normal; word-break: keep-all; }
   .sponsors-soon-sub  { font-size: 0.88rem; }
+
+    .reg-count-card {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* ═══════════════════════════════════════
@@ -765,6 +808,15 @@ footer {
   .sponsors-soon-card { padding: 2rem 1.5rem; }
   .sponsors-soon-text { font-size: 2rem; white-space: normal; word-break: keep-all; }
   .sponsors-soon-sub  { font-size: 0.82rem; }
+
+    .reg-count-card {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    align-items: center;
+    text-align: center;
+  }
+  .reg-count-num { font-size: 2rem; }
+  .reg-count-sub { font-size: 0.72rem; }
 }
 
 /* ═══════════════════════════════════════
@@ -780,5 +832,10 @@ footer {
   .sponsors-soon-card { padding: 1.8rem 1.2rem; }
   .sponsors-soon-text { font-size: 1.7rem; letter-spacing: 0.04em; }
   .sponsors-soon-sub  { font-size: 0.78rem; }
+
+  .reg-count-card { padding: 0.9rem 1rem; }
+  .reg-count-num  { font-size: 1.8rem; }
+  .reg-count-label{ font-size: 0.58rem; }
+  .reg-count-sub  { font-size: 0.68rem; }
 }
 

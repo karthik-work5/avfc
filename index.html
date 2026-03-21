@@ -1,152 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<meta name="theme-color" content="#F4EFE6">
-<title>AVFC Cricket League 2026</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="theme-color" content="#F4EFE6">
+  <title>AVFC Cricket League 2026</title>
 
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Outfit:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Outfit:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap"
+    rel="stylesheet">
 
-<!-- Stylesheet -->
-<link rel="stylesheet" href="css/style.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- ════════════════════════════════════
+  <!-- ════════════════════════════════════
      NAV
 ════════════════════════════════════ -->
-<nav id="mainNav">
-  <div class="nav-logo">AVFC <span>Cricket</span></div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#sponsors">Sponsors</a></li>
-    <li><a href="#organisers">Organisers</a></li>
-    <li><a href="register.html" class="nav-register-link">Register</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+  <nav id="mainNav">
+    <div class="nav-logo">AVFC <span>Cricket</span></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#sponsors">Sponsors</a></li>
+      <li><a href="#organisers">Organisers</a></li>
+      <li><a href="register.html" class="nav-register-link">Register</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<!-- Mobile Drawer -->
-<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
-  <ul>
-    <li><a href="#about"      onclick="closeMenu()">About</a></li>
-    <li><a href="#sponsors"   onclick="closeMenu()">Sponsors</a></li>
-    <li><a href="#organisers" onclick="closeMenu()">Organisers</a></li>
-  </ul>
-  <a href="register.html" class="m-cta" onclick="closeMenu()">Register Now →</a>
-</div>
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+    <ul>
+      <li><a href="#about" onclick="closeMenu()">About</a></li>
+      <li><a href="#sponsors" onclick="closeMenu()">Sponsors</a></li>
+      <li><a href="#organisers" onclick="closeMenu()">Organisers</a></li>
+    </ul>
+    <a href="register.html" class="m-cta" onclick="closeMenu()">Register Now →</a>
+  </div>
 
 
-<!-- ════════════════════════════════════
+  <!-- ════════════════════════════════════
      HERO
 ════════════════════════════════════ -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <svg class="pitch-lines" viewBox="0 0 340 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect x="60" y="20" width="220" height="460" rx="4"/>
-    <rect x="100" y="140" width="140" height="220" rx="2"/>
-    <line x1="60" y1="250" x2="280" y2="250"/>
-    <line x1="100" y1="140" x2="240" y2="140"/>
-    <line x1="100" y1="360" x2="240" y2="360"/>
-    <line x1="160" y1="20"  x2="160" y2="480"/>
-    <rect x="145" y="220" width="50" height="60" rx="1"/>
-    <rect x="148" y="215" width="6"  height="70" rx="1"/>
-    <rect x="186" y="215" width="6"  height="70" rx="1"/>
-  </svg>
-  <div class="hero-content">
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      Season 2026 &nbsp;·&nbsp; Registrations Open
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <svg class="pitch-lines" viewBox="0 0 340 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="60" y="20" width="220" height="460" rx="4" />
+      <rect x="100" y="140" width="140" height="220" rx="2" />
+      <line x1="60" y1="250" x2="280" y2="250" />
+      <line x1="100" y1="140" x2="240" y2="140" />
+      <line x1="100" y1="360" x2="240" y2="360" />
+      <line x1="160" y1="20" x2="160" y2="480" />
+      <rect x="145" y="220" width="50" height="60" rx="1" />
+      <rect x="148" y="215" width="6" height="70" rx="1" />
+      <rect x="186" y="215" width="6" height="70" rx="1" />
+    </svg>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Season 2026 &nbsp;·&nbsp; Registrations Open
+      </div>
+      <h1 class="hero-title">AVFC<em>Cricket League</em></h1>
+      <p class="hero-sub">Where passion meets the pitch — a premier tournament bringing together the finest talent,
+        fierce competition, and unforgettable moments.</p>
+      <div class="hero-actions">
+        <a href="#about" class="btn-primary">Explore the League</a>
+        <a href="#sponsors" class="btn-outline">Meet our Sponsors</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="stat-num">10</div>
+          <div class="stat-label">Teams</div>
+        </div>
+        <!-- <div><div class="stat-num">25</div><div class="stat-label">Matches</div></div> -->
+        <div>
+          <div class="stat-num">1</div>
+          <div class="stat-label">Day</div>
+        </div>
+        <div>
+          <div class="stat-num">Exciting Prizes</div>
+          <div class="stat-label">Prize Pool</div>
+        </div>
+
+        <div class="reg-count-card">
+          <div class="reg-count-label">Players Registered</div>
+          <div class="reg-count-num" id="regCount">—/100</div>
+          <div class="reg-count-sub">Spots filling fast — register before it's full</div>
+        </div>
+      </div>
     </div>
-    <h1 class="hero-title">AVFC<em>Cricket League</em></h1>
-    <p class="hero-sub">Where passion meets the pitch — a premier tournament bringing together the finest talent, fierce competition, and unforgettable moments.</p>
-    <div class="hero-actions">
-      <a href="#about" class="btn-primary">Explore the League</a>
-      <a href="#sponsors" class="btn-outline">Meet our Sponsors</a>
-    </div>
-    <div class="hero-stats">
-      <div><div class="stat-num">10</div><div class="stat-label">Teams</div></div>
-      <div><div class="stat-num">25</div><div class="stat-label">Matches</div></div>
-      <div><div class="stat-num">1</div><div class="stat-label">Days</div></div>
-      <div><div class="stat-num">₹10K</div><div class="stat-label">Prize Pool</div></div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ════════════════════════════════════
+  <!-- ════════════════════════════════════
      ABOUT
 ════════════════════════════════════ -->
-<section id="about">
-  <div class="about-grid">
-    <div>
-      <div class="section-head">
-        <p class="section-label">About the League</p>
-        <h2 class="section-title">Cricket at its<br>Finest Level</h2>
+  <section id="about">
+    <div class="about-grid">
+      <div>
+        <div class="section-head">
+          <p class="section-label">About the League</p>
+          <h2 class="section-title">Cricket at its<br>Finest Level</h2>
+        </div>
+        <div class="about-text">
+          <p>The AVFC Cricket League is a premier club-level tournament designed to celebrate the spirit of cricket.
+            From powerful openers to crafty spinners, every player gets their moment to shine.</p>
+          <p>Played in T10 format, the league brings together communities, friendships, and the love of the game onto
+            one legendary stage.</p>
+        </div>
       </div>
-      <div class="about-text">
-        <p>The AVFC Cricket League is a premier club-level tournament designed to celebrate the spirit of cricket. From powerful openers to crafty spinners, every player gets their moment to shine.</p>
-        <p>Played in T10 format, the league brings together communities, friendships, and the love of the game onto one legendary stage.</p>
+      <div class="about-features">
+
+        <div class="feature-cell">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9" />
+              <polyline points="12 7 12 12 15.5 12" />
+            </svg>
+          </div>
+          <div class="feature-title">T10 Format</div>
+          <div class="feature-desc">Fast-paced 10-over matches </div>
+        </div>
+
+        <div class="feature-cell">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 21h8M12 17v4M17 4h3v3a5 5 0 0 1-3 4.6M7 4H4v3a5 5 0 0 0 3 4.6" />
+              <path d="M7 4h10a5 5 0 0 1-5 9 5 5 0 0 1-5-9z" />
+            </svg>
+          </div>
+          <div class="feature-title">Champion Trophy</div>
+          <div class="feature-desc">Compete for the AVFC Season4 T10 League</div>
+        </div>
+
+        <div class="feature-cell">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
+              <rect x="9" y="3" width="6" height="4" rx="1" />
+              <path d="M9 12l2 2 4-4" />
+            </svg>
+          </div>
+          <div class="feature-title">Live Scorecards</div>
+          <div class="feature-desc">Real-time stats and player performance tracking</div>
+        </div>
+
+        <div class="feature-cell">
+          <div class="feature-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.686 2 6 4.686 6 8c0 4.418 6 12 6 12s6-7.582 6-12c0-3.314-2.686-6-6-6z" />
+              <circle cx="12" cy="8" r="2" />
+            </svg>
+          </div>
+          <a href="https://maps.app.goo.gl/gTW7eJJuwTuJAgo18">
+            <div class="feature-title">Sportive - Vijayawada, Kanuru</div>
+          </a>
+          <div class="feature-desc">Professional ground with certified umpiring</div>
+        </div>
+
       </div>
     </div>
-    <div class="about-features">
-
-      <div class="feature-cell">
-        <div class="feature-icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 12"/>
-          </svg>
-        </div>
-        <div class="feature-title">T10 Format</div>
-        <div class="feature-desc">Fast-paced 10-over matches </div>
-      </div>
-
-      <div class="feature-cell">
-        <div class="feature-icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M8 21h8M12 17v4M17 4h3v3a5 5 0 0 1-3 4.6M7 4H4v3a5 5 0 0 0 3 4.6"/>
-            <path d="M7 4h10a5 5 0 0 1-5 9 5 5 0 0 1-5-9z"/>
-          </svg>
-        </div>
-        <div class="feature-title">Champion Trophy</div>
-        <div class="feature-desc">Compete for the AVFC Cup and generous cash prizes</div>
-      </div>
-
-      <div class="feature-cell">
-        <div class="feature-icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
-            <rect x="9" y="3" width="6" height="4" rx="1"/>
-            <path d="M9 12l2 2 4-4"/>
-          </svg>
-        </div>
-        <div class="feature-title">Live Scorecards</div>
-        <div class="feature-desc">Real-time stats and player performance tracking</div>
-      </div>
-
-      <div class="feature-cell">
-        <div class="feature-icon" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2C8.686 2 6 4.686 6 8c0 4.418 6 12 6 12s6-7.582 6-12c0-3.314-2.686-6-6-6z"/>
-            <circle cx="12" cy="8" r="2"/>
-          </svg>
-        </div>
-        <div class="feature-title">Central Venue</div>
-        <div class="feature-desc">Professional ground with certified umpiring</div>
-      </div>
-
-    </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ════════════════════════════════════
+  <!-- ════════════════════════════════════
      SPONSORS
      ─────────────────────────────────
      HOW TO ADD A REAL PHOTO:
@@ -165,51 +194,51 @@
      Photo file goes in:  images/sponsors/
      Recommended size  :  300×300 px, JPG/WebP
 ════════════════════════════════════ -->
-<section id="sponsors">
-  <div class="section-head">
-    <p class="section-label">Our Sponsors</p>
-    <h2 class="section-title">Those Who Make<br>It Possible</h2>
-  </div>
-  <div class="sponsors-grid">
+  <section id="sponsors">
+    <div class="section-head">
+      <p class="section-label">Our Sponsors</p>
+      <h2 class="section-title">Those Who Make<br>It Possible</h2>
+    </div>
+    <div class="sponsors-grid">
 
-    <!-- SPONSOR 1 — Title Sponsor -->
-    <!-- <div class="sponsor-card">
+      <!-- SPONSOR 1 — Title Sponsor -->
+      <!-- <div class="sponsor-card">
       <div class="sponsor-photo"> -->
-        <!-- ↓ REPLACE "RK" WITH YOUR IMAGE TAG WHEN READY ↓ -->
-        <!-- <img src="images/sponsors/MOTHER PHOTO.jpeg" alt="Rajesh Kumar"> 
+      <!-- ↓ REPLACE "RK" WITH YOUR IMAGE TAG WHEN READY ↓ -->
+      <!-- <img src="images/sponsors/MOTHER PHOTO.jpeg" alt="Rajesh Kumar"> 
       </div>
       <div class="sponsor-name">Rajesh Kumar</div>
       <div class="sponsor-company">RK Enterprises Pvt. Ltd.</div>
       <span class="sponsor-tier tier-gold">Title Sponsor</span>
     </div> -->
 
-    <!-- SPONSOR 2 — Gold -->
-    <!-- <div class="sponsor-card">
+      <!-- SPONSOR 2 — Gold -->
+      <!-- <div class="sponsor-card">
       <div class="sponsor-photo"> -->
-        <!-- <img src="images/sponsors/priya-sharma.jpg" alt="Priya Sharma"> -->
-        <!-- PS
+      <!-- <img src="images/sponsors/priya-sharma.jpg" alt="Priya Sharma"> -->
+      <!-- PS
       </div>
       <div class="sponsor-name">Priya Sharma</div>
       <div class="sponsor-company">Sharma Motors</div>
       <span class="sponsor-tier tier-gold">Ground Sponsor</span>
     </div> -->
 
-    <!-- SPONSOR 3 — Gold -->
-    <!-- <div class="sponsor-card">
+      <!-- SPONSOR 3 — Gold -->
+      <!-- <div class="sponsor-card">
       <div class="sponsor-photo"> -->
-        <!-- <img src="images/sponsors/anil-verma.jpg" alt="Anil Verma"> -->
-        <!-- AV -->
+      <!-- <img src="images/sponsors/anil-verma.jpg" alt="Anil Verma"> -->
+      <!-- AV -->
       <!-- </div>
       <div class="sponsor-name">Anil Verma</div>
       <div class="sponsor-company">Verma Steel Works</div>
       <span class="sponsor-tier tier-gold">Jersey Sponsor</span>
     </div> -->
 
-    <!-- SPONSOR 4 — Silver -->
-    <!-- <div class="sponsor-card">
+      <!-- SPONSOR 4 — Silver -->
+      <!-- <div class="sponsor-card">
       <div class="sponsor-photo"> -->
-        <!-- <img src="images/sponsors/suresh-reddy.jpg" alt="Suresh Reddy"> -->
-        <!-- SR
+      <!-- <img src="images/sponsors/suresh-reddy.jpg" alt="Suresh Reddy"> -->
+      <!-- SR
       </div>
       <div class="sponsor-name">Suresh Reddy</div>
       <div class="sponsor-company">Reddy &amp; Sons Builders</div>
@@ -217,17 +246,17 @@
     </div>
 
   </div> -->
-  
-<div class="sponsors-coming-soon">
-    <div class="sponsors-soon-card">
-      <p class="sponsors-soon-text">Yet to be Announced</p>
-      <p class="sponsors-soon-sub">Our sponsors will be revealed soon. Stay tuned.</p>
-    </div>
-  </div>
-</section>
+
+      <div class="sponsors-coming-soon">
+        <div class="sponsors-soon-card">
+          <p class="sponsors-soon-text">Yet to be Announced</p>
+          <p class="sponsors-soon-sub">Our sponsors will be revealed soon. Stay tuned.</p>
+        </div>
+      </div>
+  </section>
 
 
-<!-- ════════════════════════════════════
+  <!-- ════════════════════════════════════
      ORGANISERS
      ─────────────────────────────────
      HOW TO ADD A REAL PHOTO:
@@ -245,132 +274,139 @@
      Photo file goes in:  images/organisers/
      Recommended size  :  300×300 px, JPG/WebP
 ════════════════════════════════════ -->
-<section id="organisers">
-  <div class="section-head">
-    <p class="section-label">Meet the Organisers</p>
-    <h2 class="section-title">The Team Behind<br>the League</h2>
-  </div>
-  <div class="organisers-grid">
-
-    <!-- ORGANISER 1 -->
-    <div class="organiser-card">
-      <div class="organiser-photo">
-        <!-- ↓ REPLACE "MN" WITH YOUR IMAGE TAG WHEN READY ↓ -->
-        <img src="images/organisers/rajesh.jpeg" alt="Rajesh Kumar">
-        
-      </div>
-      <div class="organiser-name">Rajesh Kumar Sriram</div>
-      <div class="organiser-role">President</div>
-      <!-- <a href="mailto:mohan@avfcleague.com" class="organiser-email">mohan@avfcleague.com</a> -->
+  <section id="organisers">
+    <div class="section-head">
+      <p class="section-label">Meet the Organisers</p>
+      <h2 class="section-title">The Team Behind<br>the League</h2>
     </div>
+    <div class="organisers-grid">
 
-    <!-- ORGANISER 2 -->
-    <div class="organiser-card">
-      <div class="organiser-photo">
-        <img src="images/organisers/prasad.jpeg" alt="Prasad Divvela">
-        
+      <!-- ORGANISER 1 -->
+      <div class="organiser-card">
+        <div class="organiser-photo">
+          <!-- ↓ REPLACE "MN" WITH YOUR IMAGE TAG WHEN READY ↓ -->
+          <img src="images/organisers/rajesh.jpeg" alt="Rajesh Kumar">
+
+        </div>
+        <div class="organiser-name">Rajesh Kumar Sriram</div>
+        <div class="organiser-role">President</div>
+        <!-- <a href="mailto:mohan@avfcleague.com" class="organiser-email">mohan@avfcleague.com</a> -->
       </div>
-      <div class="organiser-name">Prasad Divvela</div>
-      <div class="organiser-role">Vice President</div>
-      <!-- <a href="mailto:deepa@avfcleague.com" class="organiser-email">deepa@avfcleague.com</a> -->
-    </div>
 
-    <!-- ORGANISER 3 -->
-    <div class="organiser-card">
-      <div class="organiser-photo">
-        <img src="images/organisers/mahesh.jpeg" alt="Mahesh Kumar">
-      
+      <!-- ORGANISER 2 -->
+      <div class="organiser-card">
+        <div class="organiser-photo">
+          <img src="images/organisers/prasad.jpeg" alt="Prasad Divvela">
+
+        </div>
+        <div class="organiser-name">Prasad Divvela</div>
+        <div class="organiser-role">Vice President</div>
+        <!-- <a href="mailto:deepa@avfcleague.com" class="organiser-email">deepa@avfcleague.com</a> -->
       </div>
-      <div class="organiser-name">Mahesh Kumar Sriram</div>
-      <div class="organiser-role">Treasurer</div>
-      <!-- <a href="mailto:arjun@avfcleague.com" class="organiser-email">arjun@avfcleague.com</a> -->
-    </div>
 
-    <!-- ORGANISER 4 -->
-    <div class="organiser-card">
-      <div class="organiser-photo">
-        <img src="images/organisers/sravan.jpeg" alt="Sravan Tej">
-        
+      <!-- ORGANISER 3 -->
+      <div class="organiser-card">
+        <div class="organiser-photo">
+          <img src="images/organisers/mahesh.jpeg" alt="Mahesh Kumar">
+
+        </div>
+        <div class="organiser-name">Mahesh Kumar Sriram</div>
+        <div class="organiser-role">Treasurer</div>
+        <!-- <a href="mailto:arjun@avfcleague.com" class="organiser-email">arjun@avfcleague.com</a> -->
       </div>
-      <div class="organiser-name">Sravan Tej Buragadda</div>
-      <div class="organiser-role">Secretary &amp; Technical Head</div>
-      <!-- <a href="mailto:sneha@avfcleague.com" class="organiser-email">sneha@avfcleague.com</a> -->
+
+      <!-- ORGANISER 4 -->
+      <div class="organiser-card">
+        <div class="organiser-photo">
+          <img src="images/organisers/sravan.jpeg" alt="Sravan Tej">
+
+        </div>
+        <div class="organiser-name">Sravan Tej Buragadda</div>
+        <div class="organiser-role">Secretary &amp; Technical Head</div>
+        <!-- <a href="mailto:sneha@avfcleague.com" class="organiser-email">sneha@avfcleague.com</a> -->
+      </div>
+
     </div>
-
-  </div>
-</section>
+  </section>
 
 
-<!-- ════════════════════════════════════
+  <!-- ════════════════════════════════════
      REGISTER CTA  —  bottom of page
 ════════════════════════════════════ -->
-<section id="register-cta">
-  <div class="cta-inner">
-    <p class="cta-label">Join the League</p>
-    <h2 class="cta-title">Ready to<br><em>Play?</em></h2>
-    <p class="cta-sub">Register now to secure your spot in the AVFC Cricket League 2026. All positions and skill levels welcome — your journey starts here.</p>
-    <div class="cta-actions">
-      <a href="register.html" class="btn-cta-primary">Register as a Player</a>
-      <!-- <a href="mailto:contact@avfcleague.com" class="btn-cta-outline">Contact the Team</a> -->
+  <section id="register-cta">
+    <div class="cta-inner">
+      <p class="cta-label">Join the League</p>
+      <h2 class="cta-title">Ready to<br><em>Play?</em></h2>
+      <p class="cta-sub">Register now to secure your spot in the AVFC Cricket League 2026. All positions and skill
+        levels welcome — your journey starts here.</p>
+      <div class="cta-actions">
+        <a href="register.html" class="btn-cta-primary">Register as a Player</a>
+        <!-- <a href="mailto:contact@avfcleague.com" class="btn-cta-outline">Contact the Team</a> -->
+      </div>
+      <p class="cta-deadline">Registration closes &nbsp;<strong>2 April 2026</strong></p>
     </div>
-    <p class="cta-deadline">Registration closes &nbsp;<strong>2 April 2026</strong></p>
-  </div>
-</section>
+  </section>
 
 
-<!-- ════════════════════════════════════
+  <!-- ════════════════════════════════════
      VIDEO INTERSTITIAL OVERLAY
 ════════════════════════════════════ -->
-<div id="videoOverlay" role="dialog" aria-modal="true" aria-label="Sponsor video">
-  <div class="vo-inner">
-    <div class="vo-topbar">
-      <span class="vo-sponsor-tag" id="voSponsorTag">Sponsor Message</span>
-      <button class="vo-skip" id="voSkip" onclick="goToRegister()">
-        Skip <span id="skipCountdown"></span>
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </button>
-    </div>
-    <div class="vo-video-wrap">
-      <video id="sponsorVideo" playsinline webkit-playsinline preload="auto">
-        <source src="" type="video/mp4">
-      </video>
-      <div class="vo-progress">
-        <div class="vo-progress-fill" id="voProgressFill"></div>
+  <div id="videoOverlay" role="dialog" aria-modal="true" aria-label="Sponsor video">
+    <div class="vo-inner">
+      <div class="vo-topbar">
+        <span class="vo-sponsor-tag" id="voSponsorTag">Sponsor Message</span>
+        <button class="vo-skip" id="voSkip" onclick="goToRegister()">
+          Skip <span id="skipCountdown"></span>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+      <div class="vo-video-wrap">
+        <video id="sponsorVideo" playsinline webkit-playsinline preload="auto">
+          <source src="" type="video/mp4">
+        </video>
+        <div class="vo-progress">
+          <div class="vo-progress-fill" id="voProgressFill"></div>
+        </div>
+      </div>
+      <div class="vo-bottom">
+        <p class="vo-msg">Supporting AVFC Cricket League 2025</p>
+        <button class="vo-mute" id="voMute" onclick="toggleMute()" aria-label="Toggle mute">
+          <svg id="iconUnmute" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07" />
+          </svg>
+          <svg id="iconMute" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+            <line x1="23" y1="9" x2="17" y2="15" />
+            <line x1="17" y1="9" x2="23" y2="15" />
+          </svg>
+        </button>
       </div>
     </div>
-    <div class="vo-bottom">
-      <p class="vo-msg">Supporting AVFC Cricket League 2025</p>
-      <button class="vo-mute" id="voMute" onclick="toggleMute()" aria-label="Toggle mute">
-        <svg id="iconUnmute" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
-        </svg>
-        <svg id="iconMute" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
-          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-          <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
-        </svg>
-      </button>
-    </div>
   </div>
-</div>
 
 
-<!-- ════════════════════════════════════
+  <!-- ════════════════════════════════════
      FOOTER
 ════════════════════════════════════ -->
-<footer>
-  <div class="footer-logo">AVFC <span>Cricket</span> League</div>
-  <div class="footer-copy">© 2025 AVFC Cricket League. All rights reserved.</div>
-  <div class="footer-links">
-    <a href="#">Instagram</a>
-    <a href="#">WhatsApp</a>
-    <a href="mailto:contact@avfcleague.com">Contact</a>
-  </div>
-</footer>
+  <footer>
+    <div class="footer-logo">AVFC <span>Cricket</span> League</div>
+    <div class="footer-copy">© 2025 AVFC Cricket League. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="#">Instagram</a>
+      <a href="#">WhatsApp</a>
+      <a href="mailto:contact@avfcleague.com">Contact</a>
+    </div>
+  </footer>
 
-<!-- JS at the bottom -->
-<script src="js/main.js"></script>
+  <!-- JS at the bottom -->
+   <script src="config.js"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>

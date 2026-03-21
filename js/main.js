@@ -120,3 +120,29 @@ document.addEventListener('click', e => {
     openVideoOverlay();
   }
 });
+
+function loadRegCount() {
+  fetch(CONFIG.APPS_SCRIPT_URL)
+    .then(res => res.json())
+    .then(data => {
+      const el = document.getElementById('regCount');
+      if (!el || typeof data.count !== 'number') return;
+
+      const newText = data.count + '/100';
+
+      if (el.textContent !== newText) {
+        el.style.transition = 'opacity 0.3s';
+        el.style.opacity    = '0';
+        setTimeout(() => {
+          el.textContent   = newText;
+          el.style.opacity = '1';
+        }, 300);
+      }
+    })
+    .catch(err => {
+      console.log('Count fetch failed:', err);
+    });
+}
+
+loadRegCount();
+setInterval(loadRegCount, 10000);
