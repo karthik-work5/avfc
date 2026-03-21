@@ -42,7 +42,7 @@ document.addEventListener('click', e => {
      { src: 'videos/sharma-motors.mp4',     sponsor: 'Sharma Motors'     },
 ═══════════════════════════════════════════════════════════════ */
 const SPONSOR_VIDEOS = [
-  { src: 'videos/demo.mp4', sponsor: 'AVFC'    }, /* ← REPLACE */
+  { src: 'videos/rajesh.mp4', sponsor: 'VEDASHREE AGENCIES'    }, /* ← REPLACE */
   // { src: 'videos/demo.mp4', sponsor: 'Sharma Motors'     }, /* ← REPLACE */
   // { src: 'videos/demo.mp4', sponsor: 'Verma Steel Works' }, /* ← REPLACE */
   // { src: 'videos/demo.mp4', sponsor: 'Reddy & Sons'      }, /* ← REPLACE */
