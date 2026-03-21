@@ -42,11 +42,11 @@ document.addEventListener('click', e => {
      { src: 'videos/sharma-motors.mp4',     sponsor: 'Sharma Motors'     },
 ═══════════════════════════════════════════════════════════════ */
 const SPONSOR_VIDEOS = [
-  { src: 'videos/demo.mp4', sponsor: 'RK Enterprises'    }, /* ← REPLACE */
-  { src: 'videos/demo.mp4', sponsor: 'Sharma Motors'     }, /* ← REPLACE */
-  { src: 'videos/demo.mp4', sponsor: 'Verma Steel Works' }, /* ← REPLACE */
-  { src: 'videos/demo.mp4', sponsor: 'Reddy & Sons'      }, /* ← REPLACE */
-  { src: 'videos/demo.mp4', sponsor: 'AVFC Partner'      }, /* ← REPLACE */
+  { src: 'videos/demo.mp4', sponsor: 'AVFC Cricket League'    }, /* ← REPLACE */
+  // { src: 'videos/demo.mp4', sponsor: 'Sharma Motors'     }, /* ← REPLACE */
+  // { src: 'videos/demo.mp4', sponsor: 'Verma Steel Works' }, /* ← REPLACE */
+  // { src: 'videos/demo.mp4', sponsor: 'Reddy & Sons'      }, /* ← REPLACE */
+  // { src: 'videos/demo.mp4', sponsor: 'AVFC Partner'      }, /* ← REPLACE */
 ];
 
 const SKIP_AFTER_SECONDS = 5; /* seconds before skip button activates */
@@ -67,19 +67,19 @@ function openVideoOverlay() {
   sponsorTag.textContent = pick.sponsor;
 
   /* Lock skip for N seconds */
-  countdown = SKIP_AFTER_SECONDS;
-  skipBtn.classList.add('locked');
-  skipCd.textContent = '(' + countdown + ')';
-  skipTimer = setInterval(() => {
-    countdown--;
-    if (countdown <= 0) {
-      clearInterval(skipTimer);
-      skipBtn.classList.remove('locked');
-      skipCd.textContent = '';
-    } else {
-      skipCd.textContent = '(' + countdown + ')';
-    }
-  }, 1000);
+  // countdown = SKIP_AFTER_SECONDS;
+  // skipBtn.classList.add('locked');
+  // skipCd.textContent = '(' + countdown + ')';
+  // skipTimer = setInterval(() => {
+  //   countdown--;
+  //   if (countdown <= 0) {
+  //     clearInterval(skipTimer);
+  //     skipBtn.classList.remove('locked');
+  //     skipCd.textContent = '';
+  //   } else {
+  //     skipCd.textContent = '(' + countdown + ')';
+  //   }
+  // }, 1000);
 
   overlay.classList.add('show');
   document.body.style.overflow = 'hidden';
@@ -145,4 +145,4 @@ function loadRegCount() {
 }
 
 loadRegCount();
-setInterval(loadRegCount, 10000);
+setInterval(loadRegCount, 2000);
