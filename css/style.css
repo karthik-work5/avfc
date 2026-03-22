@@ -1439,7 +1439,7 @@ footer {
 
   /* .sponsors-grid  { grid-template-columns: 1fr 1fr; gap: 1.5px; }
   .sponsor-card   { padding: 1.7rem 0.9rem; } */
-  .sponsors-grid {
+.sponsors-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -1447,10 +1447,10 @@ footer {
     background: none;
     border: none;
   }
-
   .sponsor-card {
     flex: 0 0 calc(50% - 1px);
     border: 1.5px solid var(--border);
+    box-sizing: border-box;
   }
 
   /* .sponsor-photo  { width: 72px; height: 72px; font-size: 1.3rem; } */
@@ -1541,6 +1541,26 @@ footer {
 }
 
 /* ═══════════════════════════════════════
+   RESPONSIVE — 420px  (small phones)
+═══════════════════════════════════════ */
+@media (max-width: 420px) {
+  .sponsors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5px;
+    background: none;
+    border: none;
+  }
+  .sponsor-card {
+    flex: 0 0 calc(50% - 1px);
+    border: 1.5px solid var(--border);
+    box-sizing: border-box;
+  }
+}
+
+
+/* ═══════════════════════════════════════
    RESPONSIVE — 380px  (small phones)
 ═══════════════════════════════════════ */
 @media (max-width: 380px) {
@@ -1549,10 +1569,13 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1px;
+    background: none;
+    border: none;
   }
-
   .sponsor-card {
     flex: 0 0 calc(50% - 1px);
+    border: 1.5px solid var(--border);
+    box-sizing: border-box;
   }
 
   .organisers-grid {
