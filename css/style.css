@@ -1318,6 +1318,26 @@ footer {
   color: var(--amber);
 }
 
+/* ── Sponsor pair card ── */
+.sponsor-pair {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+.sponsor-pair-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+.sponsor-pair-divider {
+  width: 1px;
+  background: var(--border);
+  align-self: stretch;
+  flex-shrink: 0;
+}
 /* ═══════════════════════════════════════
    RESPONSIVE — 1024px
 ═══════════════════════════════════════ */
@@ -1437,6 +1457,8 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .sponsor-pair        { gap: 1rem; }
+.sponsors-soon-card  { padding: 1.8rem 1rem; }
   /* .sponsors-grid  { grid-template-columns: 1fr 1fr; gap: 1.5px; }
   .sponsor-card   { padding: 1.7rem 0.9rem; } */
 .sponsors-grid {
@@ -1623,4 +1645,11 @@ footer {
   .reg-count-sub {
     font-size: 0.68rem;
   }
+  .sponsor-pair        { gap: 0.6rem; flex-direction: column; align-items: center; }
+.sponsor-pair-divider{ width: 60%; height: 1px; align-self: auto; margin: 0.5rem 0; }
+.sponsors-soon-card  { padding: 1.5rem 1rem; }
+.sponsors-grid .sponsor-photo { width: 80px; height: 80px; font-size: 1.4rem; }
+.sponsors-grid .sponsor-name  { font-size: 0.82rem; }
+.sponsors-grid .sponsor-company { font-size: 0.72rem; }
+.sponsors-grid .sponsor-tier  { font-size: 0.52rem; padding: 0.18rem 0.5rem; }
 }
