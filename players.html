@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="theme-color" content="#F4EFE6">
+<title>Players · AVFC Cricket League</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=Outfit:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/players.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-logo">AVFC <span>Cricket</span></a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <p class="section-label">AVFC Cricket League 2026</p>
+  <h1 class="page-title">Players</h1>
+  <p class="page-subtitle">Meet all the registered players of this season.</p>
+
+  <div class="search-wrap">
+    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+    </svg>
+    <input
+      type="search"
+      id="searchInput"
+      placeholder="Search player by name…"
+      autocomplete="off"
+      inputmode="search"
+    >
+    <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+  </div>
+
+  <p class="player-count" id="playerCount"></p>
+</div>
+
+<!-- PLAYERS GRID -->
+<main class="players-section">
+  <div class="players-grid" id="playersGrid"></div>
+  <div class="no-results" id="noResults">
+    <p class="no-results-icon">🏏</p>
+    <p class="no-results-text">No players found</p>
+    <p class="no-results-sub">Try a different name</p>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">AVFC <span>Cricket</span> League</div>
+  <div class="footer-copy">© 2026 AVFC Cricket League. All rights reserved.</div>
+</footer>
+
+<script src="js/players.js"></script>
+</body>
+</html>
