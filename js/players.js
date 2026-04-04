@@ -52,7 +52,7 @@ const PLAYERS = [
   { fn: 'Karthik Pavan Kumar', ln: 'Vutukuri', place: 'Vijayawada', grade: 'B' },
   { fn: 'Manoj', ln: 'Kumar', place: 'Vijayawada', grade: 'B' },
   { fn: 'Bharadwaj', ln: 'Potturu', place: 'Vijayawada', grade: 'B+' },
-  { fn: 'mahesh', ln: 'sriram', place: 'Vijayawada', grade: 'B' },
+  { fn: 'mahesh', ln: 'sriram', place: 'Vijayawada', grade: 'B+' },
   { fn: 'Siva Venkata Datta', ln: 'Sanka', place: 'Vijayawada', grade: 'A' },
   { fn: 'Prudhvi', ln: 'Kota', place: 'Vijayawada', grade: 'A' },
   { fn: 'Venkatesh', ln: 'Maddala', place: 'Vijayawada', grade: 'B' },
