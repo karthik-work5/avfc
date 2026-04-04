@@ -116,7 +116,8 @@ const PLAYERS = [
   { fn: 'harinath', ln: 'K', place: 'Vijayawada', grade: 'B+' },
   { fn: 'Akash', ln: 'Vemu', place: 'Vijayawada', grade: 'B' },
   { fn: 'kiriti', ln: 'T', place: 'Vijayawada', grade: 'B' },
-  { fn: 'Manohar', ln: 'Tummalapenta', place: 'Vijayawada', grade: 'B+'}
+  { fn: 'Manohar', ln: 'Tummalapenta', place: 'Vijayawada', grade: 'B+'},
+  { fn: 'Avinash', ln: 'Kasula', place: 'Vijayawada', grade: 'B+'}
 ];
 
 /* ════════════════════════════════════════
