@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVFC 2026 - Teams</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            color: #fff;
+            background: linear-gradient(135deg, #24124e 0%, #3e1f7a 100%);
+            min-height: 100vh;
+            padding: 80px 20px 40px 20px;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.06) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 1000;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateX(-5px);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            margin-bottom: 50px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .teams-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.3);
+            border-color: rgba(255, 215, 0, 0.5);
+        }
+
+        .team-logo {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 215, 0, 0.05) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .team-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-name {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #ffd700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 60px 15px 30px;
+            }
+
+            .teams-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .team-logo {
+                height: 150px;
+                font-size: 60px;
+            }
+
+            .team-name {
+                font-size: 1rem;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .teams-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-link">← Back to Home</a>
+
+    <h1>AVFC 2026 Teams</h1>
+
+    <div class="teams-container">
+    <!-- Team 1 -->
+    <a href="./teams_list_html/ksa.html" class="team-card">
+        <div class="team-logo">
+            <img src="./images/teams/ksa.jpeg" alt="Power Rangers">
+        </div>
+        <div class="team-name">KSA Architects</div>
+    </a>
+
+    <!-- Team 2 -->
+    <a href="./teams_list_html/alpha.html" class="team-card">
+        <div class="team-logo">
+            <img src="./images/teams/alpha.jpeg" alt="Royal Bull Kings">
+        </div>
+        <div class="team-name">Alpha Squad</div>
+    </a>
+
+    <!-- Team 3 -->
+    <a href="./teams_list_html/mrf.html" class="team-card">
+        <div class="team-logo">
+            <img src="./images/teams/mrf.jpeg" alt="Raghuram Steel Blasters">
+        </div>
+        <div class="team-name">Sri Raghavendra Tyres MRF</div>
+    </a>
+
+    <!-- Team 4 -->
+    <a href="./teams_list_html/barkass.html" class="team-card">
+        <div class="team-logo">
+            <img src="./images/teams/barkaas.jpeg" alt="Kankipati Legends">
+        </div>
+        <div class="team-name">Barkaas Blasters</div>
+    </a>
+
+    <!-- Team 5 -->
+    <a href="./teams_list_html/spice.html" class="team-card">
+        <div class="team-logo">
+            <img src="./images/teams/spice.jpeg" alt="Don Darlings">
+        </div>
+        <div class="team-name">Spice Squad</div>
+    </a>
+
+    <!-- Team 6 -->
+    <a href="./teams_list_html/balayya.html" class="team-card">
+        <div class="team-logo">
+            <img src="./images/teams/balayya.jpeg" alt="Amulya JGS Kings">
+        </div>
+        <div class="team-name">Balayya Blasters</div>
+    </a>
+
+    <!-- Team 7 -->
+    <a href="./teams_list_html/alapati.html" class="team-card">
+        <div class="team-logo">
+            <img src="./images/teams/alapati.jpeg" alt="PVS Silver">
+        </div>
+        <div class="team-name">Alapatis Bhajarang Fighters</div>
+    </a>
+
+    <!-- Team 8 -->
+    <a href="./teams_list_html/amulya.html" class="team-card">
+        <div class="team-logo">
+            <img src="./images/teams/amulya.jpeg" alt="Bluestone Blasters">
+        </div>
+        <div class="team-name">Amulya JGS Kings</div>
+    </a>
+
+    <!-- Team 9 -->
+    <a href="./teams_list_html/jwala.html" class="team-card">
+        <div class="team-logo">
+            <img src="./images/teams/jwala.jpeg" alt="Swish Swingers">
+        </div>
+        <div class="team-name">Jwala Warriors</div>
+    </a>
+
+    <!-- Team 10 -->
+    <a href="./teams_list_html/jai_sriram.html" class="team-card">
+        <div class="team-logo">
+            <img src="./images/teams/jai sriram.jpeg" alt="Rasrin Rangers">
+        </div>
+        <div class="team-name">Jai Sriram Warriors</div>
+    </a>
+
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Players</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #24124e 0%, #3e1f7a 100%);
+    min-height: 100vh;
+    padding: 80px 20px 40px 20px;
+}
+
+.team-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.team-header h1 {
+    color: #c0c0c0;
+    font-size: 2.5rem;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.players-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.player-card {
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+}
+
+.player-photo {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.3);
+    transition: 0.3s;
+}
+
+.player-name {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.player-surname {
+    font-size: 1.1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-results {
+    text-align: center;
+    display: none;
+}
+.back-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 25px;
+    font-weight: bold;
+    z-index: 9999; /* important */
+}
+
+</style>
+</head>
+
+<body>
+
+<a href="../teams.html" class="back-link">← Back to Teams</a>
+
+<div class="team-header">
+    <h1>Barkaas Blasters</h1>
+</div>
+
+<div class="search-container">
+    <input type="text" id="searchBox" class="search-box" placeholder="Search players...">
+</div>
+
+<div class="players-container" id="playersContainer">
+    <div class="no-results" id="noResults">
+        <h3>No players found</h3>
+    </div>
+</div>
+
+<script>
+const playerData = [
+    { firstName: "Sravan tej", lastName: "Buragadda" },
+    { firstName: "Koushalendra", lastName: "Bayyana" },
+    { firstName: "Chitturi", lastName: "Nikhil" },
+    { firstName: "Pavan", lastName: "Padmanabhuni" },
+    { firstName: "ACP", lastName: "Deepak" },
+    { firstName: "Vineel", lastName: "Bolisetty" },
+    { firstName: "Vijay", lastName: "Rajiv" },
+    { firstName: "Nithin", lastName: "Ch" },
+    { firstName: "Manoj", lastName: "Kumar" },
+    { firstName: "Karthikeya", lastName: "Tondepu" }
+];
+
+
+// ✅ Default fallback image
+const DEFAULT_PHOTO = "https://static.vecteezy.com/system/resources/previews/045/892/686/non_2x/badminton-player-icon-image-symbol-illustration-vector.jpg";
+
+// ✅ Auto image path generator (.jpg)
+function getImagePath(player) {
+    let name = player.firstName;
+
+    if (player.lastName) {
+        name += "_" + player.lastName;
+    }
+
+    //name = name.replace(/\s+/g, "_");
+
+    return `../images/players/${name}.jpg`;
+}
+
+// ✅ Render players
+function renderPlayers(data) {
+    const container = document.getElementById('playersContainer');
+    const noResults = document.getElementById('noResults');
+
+    data.forEach(player => {
+        const card = document.createElement('div');
+        card.className = 'player-card';
+
+        card.innerHTML = `
+            <img src="${getImagePath(player)}"
+                 onerror="this.src='${DEFAULT_PHOTO}'"
+                 class="player-photo">
+
+            <div>
+                <div class="player-name">${player.firstName}</div>
+                <div class="player-surname">${player.lastName}</div>
+            </div>
+        `;
+
+        container.insertBefore(card, noResults);
+    });
+}
+
+// ✅ Search
+function searchPlayers() {
+    const search = document.getElementById('searchBox').value.toLowerCase();
+    const cards = document.querySelectorAll('.player-card');
+    let found = false;
+
+    cards.forEach(card => {
+        const name = card.innerText.toLowerCase();
+        if (name.includes(search)) {
+            card.classList.remove('hidden');
+            found = true;
+        } else {
+            card.classList.add('hidden');
+        }
+    });
+
+    document.getElementById('noResults').style.display = found ? 'none' : 'block';
+}
+
+document.getElementById('searchBox').addEventListener('input', searchPlayers);
+
+// ✅ Init
+renderPlayers(playerData);
+
+</script>
+
+</body>
+</html>
